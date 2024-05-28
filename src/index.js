@@ -3,10 +3,10 @@ function displayTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
   console.log(response.data);
-}
-cityElement.innerHTML = response.data.city;
-temperatureElement.innerHTML = temperature;
 
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = temperature;
+}
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
