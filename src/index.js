@@ -6,7 +6,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   // let iconElement = document.querySelector("#icon");
-
+  console.log(response.data);
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
 }
