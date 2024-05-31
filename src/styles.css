@@ -48,6 +48,7 @@ main {
 
 .current-temperature {
   font-size: 48px;
+  display: flex;
 }
 
 .current-weather {
