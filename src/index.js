@@ -7,8 +7,8 @@ function displayTemperature(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   // let iconElement = document.querySelector("#icon");
   console.log(response.data);
-  cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = temperature;
+  //cityElement.innerHTML = response.data.city;
+  //temperatureElement.innerHTML = temperature;
 }
 function searchCity(event) {
   event.preventDefault();
