@@ -46,8 +46,7 @@ main {
   padding: 30px 0;
 }
 
-.current-temperature {
-  font-size: 48px;
+.current-temperature-rapper {
   display: flex;
 }
 
