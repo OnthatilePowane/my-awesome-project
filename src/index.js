@@ -8,7 +8,7 @@ function displayTemperature(response) {
   //let iconElement = document.querySelector("#icon");
   console.log(response.data);
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.condition.description;
+  descriptionElement.innerHTML = response.data.condition.description;
   //temperatureElement.innerHTML = temperature;
 }
 function searchCity(event) {
