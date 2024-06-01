@@ -7,14 +7,14 @@ function displayTemperature(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   let actualIconElement = document.querySelector("#actual-icon");
 
-  actualIconElement.innerHTML = `<img
-              src="${response.data.condition.icon_url}" class="icon" />`;
-  //console.log(response.data);
+  console.log(response.data);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
+  actualIconElement.innerHTML = `<img
+              src="${response.data.condition.icon_url}" class="icon" />`;
 }
 function searchCity(event) {
   event.preventDefault();
