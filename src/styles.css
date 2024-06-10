@@ -1,5 +1,5 @@
 body {
-  background: #f9f7fe;
+  background: #15497a;
   font-family: "Roboto", sans-serif;
 }
 
@@ -94,7 +94,7 @@ main {
 .weather-forecast-date {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 20px;
   margin-bottom: 10px;
 }
