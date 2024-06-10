@@ -54,13 +54,28 @@ function formatDate(date) {
   let formattedDay = days[day];
   return `${formattedDay} ${hours}:${minutes}`;
 }
+
+function layoutDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[date.getDay()];
+}
 function getForecast(city) {
   let apiKey = "fd301467o0c08t1d04e40ba17cdae9f1";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
 }
 function displayForecast(response) {
-  console.log(response.data);
+  //console.log(response.data);
 
   let forecastHtml = "";
 
@@ -69,8 +84,10 @@ function displayForecast(response) {
       forecastHtml +
       `
       <div class="weather-forecast-day">
-        <div class="weather-forecast-date">Tue</div>
-        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-date">${layoutDay(day.time)}</div>
+        
+        <img src="${day.condition.icon_url}"  class="weather-forecast-icon"/>
+       
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
             <strong>${Math.round(day.temperature.maximum)}º</strong>
